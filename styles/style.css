@@ -1,21 +1,59 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(39, 36, 52);
+    background: #010e1a;
+    background: linear-gradient(180deg, rgba(1, 14, 26, 1) 31%, rgba(33, 2, 5, 1) 89%);
 }
 
 main {
-  
+  color: rgb(243, 241, 244);
 }
 
+/*  text elements */
+/* headers */
+h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    margin: 0px;
+}
 h2 {
+    color: #731d08;
     font-size: 2rem;
     line-height: 2rem;
     margin: 0px;
 }
+h3 {
+    color: #731d08;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 0px;
+}
+h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0px;
+}
 
+/* paragraph, bold, etc */
+p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 5px 0px;
+}
+small {
+    font-size: .7rem;
+}
+
+/* links and lists (nav) */
 ul {
     margin: 0px 0px 10px 0px;
+}
+a {
+    color: #731d08;
+}
+a:hover {
+    color: #c9401d;
+    text-shadow: 0px 0px 5px #FFFFFF;
 }
 
 
@@ -30,32 +68,50 @@ ul {
   height: 100%;
 }
 
-/* Hero elements */
+/* hero elements */
 .hero {
     grid-column: 1 / span 3;
-    background-color: gray;
-    height: 125px;
+    background-image: url(../images/flightrisinghero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(128, 128, 128);
+    height: 150px;
 }
-
+.hero div {
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 100%;
+    margin: 30px 25vw;
+}
+.hero button {
+    font-size: 1rem;
+    width: auto;
+    padding: 10px;
+    margin: 5px 0px;
+    border-radius: 0px;
+    border: none;
+}
 
 
 /* Slim timestamp elements */
 .timestamp {
     grid-column: 1 / span 3;
-    background-color: black;
+    background-color: #731d08;
     color: white;
     height: 30px;
     align-content: center;
+    padding: 0px 10px;
 }
 
 /* Left nav: lists and sticky control */
 .navbar {
     grid-column: 1;
     padding: 20px;
-    background-color: gray;
+    background-color: #dad6c8;
 }
 .navbar nav {
-    color:rgb(62, 9, 9);
+    color:#731d08;
     top: 0;
     position: sticky;
 }
@@ -65,26 +121,24 @@ ul {
     line-height: 1.2rem;
 }
 .navbar nav li {
-    color: rgb(0, 0, 0);
+    color: #731d08(235, 130, 137);
 }
 .navbar nav li:hover {
-    color: blue;
-    text-shadow: 0px 0px 5px #FFFFFF;
+    color: #c9401d;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
 }
 
 /* Middle update feed */
 .updates {
     grid-column: 2;
     padding: 20px;
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(255, 255, 255);
     height: auto;
 }
 .update-info p {
     text-align: left;
 }
-.update-info a {
-    color: red;
-}
+
 .update-info footer {
     text-align: right;
     margin: 20px 0px;
@@ -99,18 +153,32 @@ ul {
 .logger {
     grid-column: 3;
     padding: 20px;
-    background-color: gray;
+    background-color: #dad6c8;
 }
-
+.dev-tracker {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 10px;
+    border-radius: 15px;
+    margin: 10px 0px 0px 0px;
+}
+.dev-tracker footer {
+    text-align: right;
+    margin: 20px 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+.all-updates {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
 
 /* Bottom footer */
 footer {
     text-align: center;
     grid-column: 1 / span 3;
     padding: 5px;
-    background-color: gray;
+    background-color: #dad6c8;
 }
-
 
 /* Centering nonsense that makes me mad */
 /* center text and image labels */
@@ -120,5 +188,4 @@ footer {
 }
 img {
     display: block;
-    margin: auto;
 }
